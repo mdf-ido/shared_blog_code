@@ -1,0 +1,31 @@
+---
+- hosts: all
+  become: true
+  become_user: SYSTEM
+  become_method: runas
+  tasks:
+    - name: Copy new cert to machines
+      ansible.windows.win_copy:
+        src: "{{ pfxfile }}"
+        dest: C:\Support\wildcert.pfx
+    - name: Import certificate be used by IIS
+      ansible.windows.win_certificate_store:
+        path: C:\Support\wildcert.pfx
+        file_type: pkcs12
+        password: "{{ certpw }}"
+        store_location: LocalMachine
+        key_storage: machine
+        key_exportable: no
+        state: present
+    - name: Add a HTTPS binding
+      community.windows.win_iis_webbinding:
+        name: Default Web Site
+        protocol: https
+        port: 443
+        ip: "*"
+        certificate_hash: 11111CeRtThUmBpRiNt1111111
+        state: present
+    - name: Delete new PFX from drive
+      ansible.windows.win_file:
+        path: C:\Support\wildcert.pfx
+        state: absent
