@@ -8,9 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-  check:
-    runs-on: ubuntu-latest
-    needs: startup
-    steps:
       - uses: max/secret-scan@master
         continue-on-error: true
