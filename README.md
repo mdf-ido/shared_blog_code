@@ -30,7 +30,7 @@
 <h3 align="center">Ingenium Code</h3>
 
   <p align="center">
-    Adding human cleverness and ingenuity to scripts!
+    Adding cleverness and ingenuity to scripts!
     <br />
     <a href="https://www.ingeniumcode.io/?page_id=4816"><strong>Visit Our Blog »</strong></a>
     <br />
