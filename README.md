@@ -1,11 +1,3 @@
-# sharetocare
-Sharing Scripts with Social Media
-
-
-
-
-
-
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
 <!--
@@ -27,12 +19,6 @@ Sharing Scripts with Social Media
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 [![GitHub Super-Linter](https://github.com/mdf-ido/sharetocare/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -41,10 +27,10 @@ Sharing Scripts with Social Media
     <img src="https://www.ingeniumcode.io/wp-content/uploads/2021/02/mascot.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Shared Scripts</h3>
+<h3 align="center">Ingenium Code</h3>
 
   <p align="center">
-    Sharing to help and learn from you. 
+    Adding human cleverness and ingenuity to scripts!
     <br />
     <a href="https://www.ingeniumcode.io/?page_id=4816"><strong>Visit Our Blog »</strong></a>
     <br />
@@ -52,11 +38,9 @@ Sharing Scripts with Social Media
 </div>
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## Greetings!
 
-[![Product Name Screen Shot][product-screenshot]](https://www.ingeniumcode.io/?page_id=4816)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+I am using this repo to share scripts from blog post, videos or chat interactions. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -64,15 +48,20 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Tech and Tools
 
+![](https://img.shields.io/badge/Tools-Terraform-informational?style=flat&logo=terraform&logoColor=white&color=2bbc8a)
+![](https://img.shields.io/badge/Tools-Ansible-informational?style=flat&logo=ansiblem&logoColor=white&color=2bbc8a)
+![](https://img.shields.io/badge/Tools-VSCode-informational?style=flat&logo=visualstudiocodem&logoColor=white&color=2bbc8a)
 ![](https://img.shields.io/badge/OS-Linux-informational?style=flat&logo=linux&logoColor=white&color=2bbc8a)
 ![](https://img.shields.io/badge/Editor-IntelliJ_IDEA-informational?style=flat&logo=intellij-idea&logoColor=white&color=2bbc8a)
 ![](https://img.shields.io/badge/Code-Python-informational?style=flat&logo=python&logoColor=white&color=2bbc8a)
 ![](https://img.shields.io/badge/Shell-Bash-informational?style=flat&logo=gnu-bash&logoColor=white&color=2bbc8a)
+![](https://img.shields.io/badge/Shell-Powershell-informational?style=flat&logo=powershell&logoColor=white&color=2bbc8a)
 ![](https://img.shields.io/badge/Tools-PostgreSQL-informational?style=flat&logo=postgresql&logoColor=white&color=2bbc8a)
 ![](https://img.shields.io/badge/Tools-Docker-informational?style=flat&logo=docker&logoColor=white&color=2bbc8a)
 ![](https://img.shields.io/badge/Tools-Kubernetes-informational?style=flat&logo=kubernetes&logoColor=white&color=2bbc8a)
 ![](https://img.shields.io/badge/Tools-Red_Hat_OpenShift-informational?style=flat&logo=red-hat-open-shift&logoColor=white&color=2bbc8a)
 ![](https://img.shields.io/badge/Cloud-Digital_Ocean-informational?style=flat&logo=digitalocean&logoColor=white&color=2bbc8a)
+![](https://img.shields.io/badge/Cloud-AzureDevOps-informational?style=flat&logo=azuredevops&logoColor=white&color=2bbc8a)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -87,19 +76,6 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 - [Create an Azure DevOps Service Connection for a Private Kubernetes Cluster](https://martinheinz.dev/blog/80)
 - [Deploy Carbon Black to Linux with Ansible](https://martinheinz.dev/blog/79)
 <!-- BLOG-POST-LIST:END -->
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Multi-language support
-    - [ ] English
-    - [ ] Spanish
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- CONTRIBUTING -->
