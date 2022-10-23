@@ -76,7 +76,10 @@ I am using this repo to share scripts from blog post, videos or chat interaction
 - [Create an Azure DevOps Service Connection for a Private Kubernetes Cluster](https://martinheinz.dev/blog/80)
 - [Deploy Carbon Black to Linux with Ansible](https://martinheinz.dev/blog/79)
 <!-- BLOG-POST-LIST:END -->
+<!-- CONTRIBUTING -->
+## Did this help you?
 
+<a href="https://www.buymeacoffee.com/thecodelab" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
 <!-- CONTRIBUTING -->
 ## Contributing
