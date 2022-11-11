@@ -1,0 +1,1 @@
+Set-ADAccountPassword "CN=icontrolddc,OU=Internal,OU=Prosearchers,DC=prosearch,DC=us" -Reset -NewPassword (ConvertTo-SecureString -AsPlainText "password" -Force)
