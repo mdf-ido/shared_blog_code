@@ -31,7 +31,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run PSScriptAnalyzer
-        uses: microsoft/psscriptanalyzer-action
+        uses: microsoft/psscriptanalyzer-action@v1.1
         with:
           path: .\
           recurse: true 
