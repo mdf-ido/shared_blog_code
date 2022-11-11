@@ -21,6 +21,7 @@
 [![GitHub Super-Linter](https://github.com/mdf-ido/sharetocare/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
 ![Microsoft Security DevOps windows-latest](https://github.com/microsoft/security-devops-action/workflows/MSDO%20windows-latest/badge.svg)  
+
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
