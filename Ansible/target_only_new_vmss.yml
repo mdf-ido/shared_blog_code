@@ -1,0 +1,35 @@
+---
+- name: Change Only New Machines In Scale Set
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Set the threshold time from Github variable
+      set_fact:
+        scale_time: "{{ scaletime }}"
+    # print the threshold to the console for verification
+    - debug: var=scale_time
+    # check uptime of the machines and register the output so we can use it later to compare to the threshold
+    - name: Check and set uptime var
+      shell: uptime -s
+      register: uptime
+      become: true
+    #print the output of uptime to the console for verification
+    - debug: var=uptime.stdout_lines
+    # Task with when conditional to check if uptime is greater than the threshold
+    - name: Perform tasks if uptime is greater than the threshold
+      debug:
+        msg: "Performing tasks because uptime is greater than the threshold"
+      when: uptime.stdout > scale_time
+
+
+
+
+
+
+
+
+
+
+
+
+
