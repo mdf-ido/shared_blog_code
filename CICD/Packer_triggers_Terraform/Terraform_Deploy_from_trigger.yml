@@ -14,7 +14,7 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   tfbuild:
-    name: Terraform Build or Destroy Backend Infrastructure
+    name: Terraform Build or Destroy machine Infrastructure
     # The type of runner that the job will run on
     runs-on: [self-hosted, linux]
 
@@ -22,7 +22,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./backend/tf
+        working-directory: ./machine/tf
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
