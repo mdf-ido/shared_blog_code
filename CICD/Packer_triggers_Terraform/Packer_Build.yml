@@ -1,0 +1,68 @@
+---
+name: Create AMI and Trigger Terraform
+
+on:
+  workflow_dispatch:
+  #push:
+
+jobs:
+  
+  packer:
+    #keep the runs on self-hosted, not in ephemeral runners
+    runs-on: [self-hosted, linux]
+
+    #define outputs for the workflow to use in the next job
+    outputs:
+      AMI_ID_TF: ${{ steps.ami_id_step.outputs.AMI_ID }}
+
+    name: packer
+
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./machine/packer/
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      #Configure Packer
+      - name: Setup `packer`
+        uses: hashicorp/setup-packer@main
+        id: setup
+        with:
+          version: latest
+      # Initialize Packer 
+      - name: Initialize Packer Template
+        id: init
+        run: "packer init packer-linux-ub-machine.pkr.hcl"
+      # validate templates
+      - name: Validate Packer Template
+        id: validate
+        run: "packer validate packer-linux-ub-machine.pkr.hcl"
+      # Build the AMI
+      - name: Build AMI  
+        id: build
+        run: packer build -var "GHTOKEN=${{ secrets.PAT }}" packer-linux-ub-machine.pkr.hcl
+      # Set AMI ID as output
+      - name: Set AMI ID as output
+        id: ami_id_step
+        run: |
+          AMI_ID=$(jq -r '.builds[0].artifact_id' manifest.json | cut -d ':' -f 2)
+          echo "AMI_ID=$AMI_ID" >> "$GITHUB_OUTPUT"
+      - name: Get AMI
+        env:
+          AMI: ${{ steps.ami_id_step.outputs.AMI_ID }}
+        run: echo "The ami is $AMI"
+  trigger_another_repo:
+    needs: packer
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger second workflow
+        env:
+          AMITF: ${{ needs.packer.outputs.AMI_ID_TF }}
+        run: |
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.PAT }}" \
+            -H "Accept: application/vnd.github.everest-preview+json" \
+            "https://api.github.com/repos/repo_name/workflow_name/dispatches" \
+            -d '{"event_type": "trigger_tf_build", "client_payload": {"variable_name": "${{ needs.packer.outputs.AMI_ID_TF }}"}}'
