@@ -1,26 +1,7 @@
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
 
 <!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![GitHub Super-Linter](https://github.com/mdf-ido/sharetocare/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
-
-![Microsoft Security DevOps windows-latest](https://github.com/microsoft/security-devops-action/workflows/MSDO%20windows-latest/badge.svg)  
 
 <!-- PROJECT LOGO -->
 <br />
@@ -29,12 +10,12 @@
     <img src="https://www.ingeniumcode.io/wp-content/uploads/2021/02/mascot.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Ingenium Code</h3>
+<h3 align="center">The Code Lab - Ingenium Code</h3>
 
   <p align="center">
-    Adding cleverness and ingenuity to scripts!
+    Sharing scripts and code snippets from blog posts, videos, and chat interactions.
     <br />
-    <a href="https://www.ingeniumcode.io/?page_id=4816"><strong>Visit Our Blog »</strong></a>
+    <a href="https://www.ingeniumcode.io/devsecops-blog/"><strong>Visit Our Blog »</strong></a>
     <br />
   </p>
 </div>
@@ -43,6 +24,15 @@
 ## Greetings!
 
 I am using this repo to share scripts from blog post, videos or chat interactions. 
+
+Here are some of the things you can expect to find here:
+
+* Scripts for automating tasks
+* Code snippets for DevOps tools
+* Configuration files for CI/CD pipelines
+* And more!
+
+Here's my linktree if you want to connect with me on other platforms: [Linktree](https://linktr.ee/thecodelab)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -99,14 +89,8 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Contract Work
 
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
+If you would like to hire me for a project, please reach out to me on calendly: [Calendly](https://calendly.com/ingeniumcode/devsecopsconversation)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
