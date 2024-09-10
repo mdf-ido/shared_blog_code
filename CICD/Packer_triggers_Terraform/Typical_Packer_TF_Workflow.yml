@@ -1,0 +1,59 @@
+name: Typical Packerr and Terraform Workflow
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      ami_id: ${{ steps.extract.outputs.ami_id }} 
+    steps:
+    - uses: actions/checkout@v3
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v2
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
+    - name: Setup HashiCorp Packer
+      uses: hashicorp/setup-packer@v2.0.0
+    - name: Packer Init
+      run: packer init .
+    - name: Build AMI
+      run: packer build .
+    - id: extract
+      name: Extract AMI ID
+      run: |
+        ami_id=$(jq -r '.builds[0].artifact_id|split(":")[1]' ./manifest.json)
+        echo "ami_id=$ami_id" >> "$GITHUB_OUTPUT"
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [ build ]
+    environment:
+      name: production
+      url: ${{ steps.terraform.outputs.url }}
+    steps:
+    - uses: actions/checkout@v3
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v2
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
+    - name: Terraform Init
+      working-directory: terraform
+      run: terraform init
+    - name: Terraform Plan
+      working-directory: terraform
+      run: terraform plan -no-color -var="ami_id=${{ needs.build.outputs.ami_id }}"
+    - name: Terraform Apply
+      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      working-directory: terraform
+      run: terraform apply -auto-approve -var="ami_id=${{ needs.build.outputs.ami_id }}"
+    - id: terraform
+      name: Output URL to GitHub
+      run: echo "url=$(terraform output -raw url)" >> "$GITHUB_OUTPUT"
