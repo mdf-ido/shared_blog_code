@@ -54,6 +54,7 @@ Here's my linktree if you want to connect with me on other platforms: [Linktree]
 ![](https://img.shields.io/badge/Tools-Red_Hat_OpenShift-informational?style=flat&logo=red-hat-open-shift&logoColor=white&color=2bbc8a)
 ![](https://img.shields.io/badge/Cloud-Digital_Ocean-informational?style=flat&logo=digitalocean&logoColor=white&color=2bbc8a)
 ![](https://img.shields.io/badge/Cloud-AzureDevOps-informational?style=flat&logo=azuredevops&logoColor=white&color=2bbc8a)
+![](https://img.shields.io/badge/Tools-RaspberryPi-informational?style=flat&logo=Raspberry-Pi&logoColor=white&color=2bbc8a)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
